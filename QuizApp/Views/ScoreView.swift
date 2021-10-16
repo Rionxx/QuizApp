@@ -24,6 +24,7 @@ struct ScoreView: View {
                 .padding(.bottom, 150)
                 Spacer()
                 .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
             }
         }
         

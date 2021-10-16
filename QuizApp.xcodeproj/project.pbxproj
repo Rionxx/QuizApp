@@ -17,6 +17,7 @@
 		EA22DFA4271AB45700F2CF9E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22DFA3271AB45700F2CF9E /* HomeView.swift */; };
 		EA22DFA6271AB51500F2CF9E /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22DFA5271AB51500F2CF9E /* QuizView.swift */; };
 		EA22DFA8271ABD9100F2CF9E /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22DFA7271ABD9100F2CF9E /* ScoreView.swift */; };
+		EA22DFAB271AEBDA00F2CF9E /* quiz.csv in Resources */ = {isa = PBXBuildFile; fileRef = EA22DFAA271AEBDA00F2CF9E /* quiz.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EA22DFA3271AB45700F2CF9E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA22DFA5271AB51500F2CF9E /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		EA22DFA7271ABD9100F2CF9E /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		EA22DFAA271AEBDA00F2CF9E /* quiz.csv */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = quiz.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		EA22DF76271AB32400F2CF9E /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA22DFA9271AEBB400F2CF9E /* Data */,
 				EA22DFA2271AB43E00F2CF9E /* Models */,
 				EA22DFA1271AB43200F2CF9E /* Views */,
 				EA22DF77271AB32400F2CF9E /* QuizAppApp.swift */,
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EA22DFA9271AEBB400F2CF9E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA22DFAA271AEBDA00F2CF9E /* quiz.csv */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				EA22DF7F271AB32500F2CF9E /* Preview Assets.xcassets in Resources */,
 				EA22DF7C271AB32500F2CF9E /* Assets.xcassets in Resources */,
+				EA22DFAB271AEBDA00F2CF9E /* quiz.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
