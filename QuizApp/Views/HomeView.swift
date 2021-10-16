@@ -9,19 +9,21 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Text("〇〇クイズ")
-                .font(.system(size: 50))
-                .padding(.top, 50)
-            Spacer()
-            
-            Button(action: {
+        NavigationView {
+            VStack {
+                Text("〇〇クイズ")
+                    .font(.system(size: 50))
+                    .padding(.top, 50)
+                Spacer()
                 
-            }) {
-                Text("スタート")
-                    .font(.system(size: 30))
+                NavigationLink(destination: QuizView()) {
+                    Text("スタート")
+                        .font(.system(size: 30))
+                }
+                Spacer()
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
             }
-            Spacer()
         }
     }
 }

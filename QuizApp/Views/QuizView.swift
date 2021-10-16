@@ -6,7 +6,8 @@ struct QuizView: View {
         VStack {
             Text("Quiz 1")
                 .font(.system(size: 60))
-                .padding(.bottom, 50)
+                .padding(.top, 50)
+                Spacer()
             
             Text("お酢に卵を殻ごと入れると\n卵はどうなるでしょうか？")
                 .font(.system(size: 25))
@@ -22,6 +23,9 @@ struct QuizView: View {
                     }.padding(.bottom, 20)
                 }
             }
+            
+            Spacer()
+                .navigationBarBackButtonHidden(true)
         }
         
     }
