@@ -1,11 +1,15 @@
 import SwiftUI
 
 struct QuizView: View {
-    var csvArray: [String] = []
+    var answerButton = [1,2,3,4]
+    @State var csvArray: [String] = []
+    @State var quizArray: [String] = []
+    var quizCount = 0
+    
     var body: some View {
         NavigationView {
             VStack {
-                Text("Quiz 1")
+                Text("第\(quizCount + 1)問")
                     .font(.system(size: 60))
                     .padding(.top, 50)
                     Spacer()
@@ -14,16 +18,17 @@ struct QuizView: View {
                     .font(.system(size: 25))
                     .padding(.bottom, 50)
                 
-                // 4 select answer Button loop action
-//                VStack(alignment: .leading) {
-//                    ForEach(0 ..< 4) { i in
-//                        Button(action: {
-//
-//                        }) {
-//                            Text(QuizAnswer[i])
-//                        }.padding(.bottom, 20)
-//                    }
-//                }
+                
+                VStack(alignment: .leading) {
+                    ForEach(0 ..< 4) { i in
+                        Button(action: {
+                            csvArray = loadCSV(fileName: "quiz")
+                            quizArray = csvArray[quizCount].components(separatedBy: ",")
+                        }) {
+                            //Add Button UI soon
+                        }.padding(.bottom, 20)
+                    }
+                }
                 
                 Spacer()
                     .navigationBarBackButtonHidden(true)
@@ -32,8 +37,8 @@ struct QuizView: View {
         }
     }
     
-    
-    mutating func loadCSV(fileName: String) -> [String] {
+    //load CSV file function
+    func loadCSV(fileName: String) -> [String] {
         let csvBundle = Bundle.main.path(forResource: fileName, ofType: "csv")!
         do {
             let csvData = try String(contentsOfFile: csvBundle, encoding: String.Encoding.utf8)
